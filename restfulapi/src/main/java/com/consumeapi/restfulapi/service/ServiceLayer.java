@@ -33,7 +33,7 @@ public class ServiceLayer {
         String Url = "https://api.thecatapi.com/v1/votes/" ;
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+        headers.set("x-api-key","");
         HttpEntity entity = new HttpEntity<>(headers);
 
         String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
@@ -47,7 +47,7 @@ public class ServiceLayer {
         String Url = "https://api.thecatapi.com/v1/votes/" + id;
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+        headers.set("x-api-key","");
         HttpEntity entity = new HttpEntity<>(headers);
 
         String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
@@ -60,7 +60,7 @@ public class ServiceLayer {
         String Url = "https://api.thecatapi.com/v1/votes/" + userBody.getId();
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+        headers.set("x-api-key","");
         HttpEntity entity = new HttpEntity<>(headers);
 
         String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
