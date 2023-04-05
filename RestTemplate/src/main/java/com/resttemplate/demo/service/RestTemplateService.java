@@ -50,7 +50,7 @@ public class RestTemplateService {
 		String Url = "https://api.thecatapi.com/v1/votes/";
 		RestTemplate restTemplate =  new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set("x-api-key", "17d94b92-754f-46eb-99a0-65be65b5d18f");
+		headers.set("x-api-key", "");
 		HttpEntity entity = new HttpEntity(headers);
 		
 		String response = restTemplate.exchange(Url,HttpMethod.GET, entity ,String.class).getBody();
@@ -70,7 +70,7 @@ public class RestTemplateService {
 		String Url = "https://api.thecatapi.com/v1/votes/" + id;
 		RestTemplate restTemplate =  new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.set("x-api-key", "17d94b92-754f-46eb-99a0-65be65b5d18f");
+		headers.set("x-api-key", "");
 		HttpEntity<Object> entity = new HttpEntity<Object>(headers);
 		
 		String response = restTemplate.exchange(Url,HttpMethod.GET, entity ,String.class).getBody();
@@ -87,7 +87,7 @@ public class RestTemplateService {
 	public Votes consumeAPI(VotesBody votesBody) throws JsonMappingException, JsonProcessingException {
 		String Url = "https://api.thecatapi.com/v1/votes/" + votesBody.getId();
 		 HttpHeaders headers = new HttpHeaders();
-	     headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+	     headers.set("x-api-key","");
 	     HttpEntity entity = new HttpEntity<>(headers);
 
 	     String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
@@ -103,7 +103,7 @@ public class RestTemplateService {
 	public Votes updateEmployee(int id, Votes votes) throws JsonMappingException, JsonProcessingException {
 		String Url = "https://api.thecatapi.com/v1/votes/" + id;
 		 HttpHeaders headers = new HttpHeaders();
-	     headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+	     headers.set("x-api-key","");
 	     HttpEntity entity = new HttpEntity<>(headers);
 
 	     String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
@@ -128,7 +128,7 @@ public class RestTemplateService {
 		
 	/*	String Url = "https://api.thecatapi.com/v1/votes/" + id;
 		 HttpHeaders headers = new HttpHeaders();
-	     headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+	     headers.set("x-api-key","");
 	     HttpEntity entity = new HttpEntity<>(headers);
 
 	     String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
@@ -142,7 +142,7 @@ public class RestTemplateService {
 		
 		String Url = "https://api.thecatapi.com/v1/votes/";
 		 HttpHeaders headers = new HttpHeaders();
-	     headers.set("x-api-key","17d94b92-754f-46eb-99a0-65be65b5d18f");
+	     headers.set("x-api-key","");
 	     HttpEntity entity = new HttpEntity<>(headers);
 	     
 	     String output= restTemplate.exchange(Url,HttpMethod.GET,entity,String.class).getBody();
